@@ -1,0 +1,54 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header.desktop {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+}
+
+header.desktop .logo {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+header.desktop .logo img {
+    height: 3.5rem;
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+header.desktop h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    color: rgb(168, 168, 168);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+header.desktop h1 span {
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+header.desktop nav {
+    margin-right: 1.5rem;
+}
+
+header.desktop nav ul li {
+    display: inline-block;
+    padding: 8px;
+}
+
+header.desktop nav ul li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #4c4c4c;
+}
