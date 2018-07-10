@@ -1,3 +1,5 @@
+/* Universal styles*/
+
 html {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
@@ -19,6 +21,25 @@ p {
     font-size: 1.2rem;
     font-weight: 300;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+   
+    body {
+        background-color: #f3f5f5;
+    }
+    .container {
+        padding: 0;
+    }
+}
+
+/* Header styles*/
+
 
 header.desktop {
     display: flex;
@@ -70,8 +91,39 @@ header.desktop nav ul li a {
     color: #4c4c4c;
 }
 
+header.mobile {
+    display: none;
+}
 
+header.mobile .image-container{
+    width: 2.5rem;
+    margin-top: 0.5rem;
+}
 
+header.mobile .image-container img {
+    display: inline-block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    header.desktop {
+        display: none;
+    }
+
+    header.mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 4rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+    }
+}
+
+/* Banner styles*/
 
 
 
@@ -117,8 +169,34 @@ header.desktop nav ul li a {
     width: 60%;
 }
 
+@media only screen and (max-width: 600px) {
+    .banner {
+        display: block;
+        width: 100%;
+        margin-top: 4rem;
+        background-color: #d8d8d8;
+    }
+    .banner .image-container.container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner .text {
+        display: block;
+        width: 90%;
+        margin: 2rem 0 2rem 2rem;
+    }
+    .banner .text h1 {
+        font-size: 3rem;
+    }
+    .banner .text button {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
 
 
+/* Info styles*/
 
 
 .info {
@@ -211,10 +289,41 @@ p.credit {
     color: #4e90df;
 }
 
+@media only screen and (max-width: 600px) {
+    
+    .info .column-one{
+        display: none;
+    }
+    .info .column-two {
+        width: 100%;
+        margin-top: -2rem;
+    }
+    .info .column-two .info-each {
+        display: block;
+        border-bottom: none;
+    }
+    .info .column-two .image-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .info .column-two .image-container img {
+        width: 100%;
+        }
+    }
+    .info .column-two .info-each .text {
+        width: 90%;
+        margin: 2rem;
+    }
 
+.info .column-two .info-each:last-child {
+    background-color: #f3f5f5;
+}
 
+/* Courses styles*/
 
-
+.courses .courses-mobile {
+    display: none;
+}
 
 .courses {
     display: flex;
@@ -275,6 +384,38 @@ p.credit {
     font-weight: lighter;
 }
 
+@media only screen and (max-width: 600px) {
+    .courses {
+        background-color: #f5f4f5;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 1px solid #d8d8d8;
+    }
+    
+    .courses .course-container {
+        display: none;
+    }
+    
+    .courses .courses-mobile {
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #f5f4f5;
+        width: 90%;
+    }
+    .courses .courses-mobile h2 {
+        font-size: 2rem;
+        padding: 2rem;
+        background-color: #d8d8d8;
+        margin: 0.5rem 1rem;
+        font-weight: bold;
+    }
+}
+
+
+.thesis .thesis-mobile {
+    display: none;
+}
 
 .thesis {
     background-color: #f3f5f5;
@@ -337,7 +478,17 @@ video {
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .thesis .column-container {
+        display: none;
+    }
+    .thesis .thesis-mobile {
+        display: block;
+        margin-top: 2rem;
+    }
+}
 
+/* Footer styles*/
 
 
 footer {
@@ -352,6 +503,7 @@ footer {
 
 footer p {
     font-size: 1rem;
+    font-weight: 400;
 }
 
 footer ul {
@@ -370,4 +522,15 @@ footer a {
 .copyright {
     flex-grow: 1;
     margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    footer ul {
+        display: none;
+    }
+
+    footer .copyright {
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+    }
 }
